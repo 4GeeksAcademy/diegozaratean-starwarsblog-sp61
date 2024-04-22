@@ -18,7 +18,9 @@ export const Home = () =>{
 	
 				
 				<h1>Naves desde FLUX</h1>
-				{  store.naves.map( (item)=> <Nave  key={item.url} uid={item.url}  title={item.name} />) }
+				<div className="row flex-row flex-nowrap overflow-auto ">
+					{  store.naves.map( (item)=> <Nave  key={item.uid} uid={item.url}  title={item.name} />) }
+				</div>
 	
 			
 		</div>
